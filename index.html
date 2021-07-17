@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music player</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="playing-now">
+        <span onclick="playlist()" id="down-arrow"><i class="fas fa-caret-down"></i></span>
+        <span id="play-text">Paused now</span>
+        <span id="playlist-icon"><i class="fas fa-music"></i></span>
+      </div>
+
+      <div class="img-container">
+        <img src="images/Onepunchman.jpg" alt="image-cover" id="cover" />
+      </div>
+      <audio src="music/onepunchman.mp3" id="audio"></audio>
+
+      <div class="music-name">
+        <div class="song-info">
+          <div class="song-name">One punch man</div>
+        </div>
+        <div
+          onclick="
+        heartColor()"
+          class="heart"
+        >
+          <i class="fa fa-heart" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="progress">
+        <div class="p-line"></div>
+      </div>
+
+      <div class="navigations">
+        <div class="buttons">
+          <div id="prev-btn" class="fas fa-backward"></div>
+          <div id="play-btn" class="fas fa-play"></div>
+          <div id="next-btn" class="fas fa-forward"></div>
+        </div>
+        <div id="song-list">
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
